@@ -67,7 +67,7 @@ pipeline {
 
                 // Securely transfer files using sshpass and SCP
                 sh '''
-                    sshpass -p "$LABS_PSW" scp -o StrictHostKeyChecking=no -r .                     "$LABS_USR"@g01.itversity.com:/home/itv006277/retailproject
+                    sshpass -p "$LABS_PSW" scp -o StrictHostKeyChecking=no -r . "$LABS_USR"@g02.itversity.com:/home/itv012861/retailproject
                     if [ $? -eq 0 ]; then
                         echo "Deployment successful!"
                     else
